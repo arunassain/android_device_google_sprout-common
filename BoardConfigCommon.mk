@@ -22,7 +22,10 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 134217728
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# kernel stuff
+# Use mke2fs instead of make_ext4fs
+TARGET_USES_MKE2FS := true
+
+# Kernel Stuff
 TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
 TARGET_KERNEL_CONFIG := lineageos_sprout_defconfig
 BOARD_KERNEL_CMDLINE :=
