@@ -512,11 +512,14 @@ on boot
     chmod 0770 /sys/power/tuxonice
     chmod 0220 /sys/power/tuxonice/do_hibernate
 
-# AGPS
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
+    # AGPS
     mkdir /data/agps_supl 0771 gps system
 
-## Thermal
-  #change permissions on thermal devices
+# Thermal
+  # change permissions on thermal devices
   chown root system /proc/mtktscpu/mtktscpu
   chmod 0660 /proc/mtktscpu/mtktscpu
   chown root system /proc/mtktsabb/mtktsabb
