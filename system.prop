@@ -57,7 +57,6 @@ ro.boot.selinux=disable
 
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false
-
 ro.mediatek.chip_ver=S01
 ro.mediatek.version.release=ALPS.W10.24.p0
 ro.mediatek.platform=MT6582
@@ -81,3 +80,4 @@ ril.radiooff.poweroffMD=0
 import /oem/oem.prop ro.product.name
 import /oem/oem.prop ro.product.manufacturer
 import /oem/oem.prop ro.product.model
+
