@@ -97,12 +97,28 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
-    tinymix
+    tinymix \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl
+
+# HIDL Manifest
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadioGoogle \
     FmRadioTrampoline2
+
+# Graphics
+ PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl
+
+# Memtrack
+ PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl
 
 # Wifi
  PRODUCT_PACKAGES += \
@@ -110,7 +126,9 @@ PRODUCT_PACKAGES += \
     hostapd \
     dhcpcd.conf \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    wificond \
+    android.hardware.wifi@1.0-service
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1
@@ -118,6 +136,14 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     librs_jni \
     com.android.future.usb.accessory
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
 
 PRODUCT_PACKAGES += \
     charger \
