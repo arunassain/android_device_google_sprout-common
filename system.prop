@@ -55,6 +55,9 @@ ro.zygote.preload.enable=0
 ro.kernel.zio=38,108,105,16
 ro.boot.selinux=disable
 
+# Media
+persist.media.treble_omx=false
+
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false
 ro.mediatek.chip_ver=S01
