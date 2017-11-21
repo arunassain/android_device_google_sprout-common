@@ -36,6 +36,9 @@ BOARD_KERNEL_PAGESIZE := 2048
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
+# Symbols
+TARGET_LDPRELOAD += libxlog.so
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/fstab.sprout
 
@@ -71,7 +74,7 @@ WIFI_DRIVER_FW_PATH_STA:=P2P
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 
-MALLOC_IMPL := dlmalloc
+MALLOC_SVELTE := true
 DEVICE_RESOLUTION := 480x854
 
 

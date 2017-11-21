@@ -1,7 +1,7 @@
 #
 # system.prop for sprout
 #
-rild.libpath=/system/lib/mtk-ril.so
+rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
 
@@ -57,6 +57,9 @@ ro.boot.selinux=disable
 
 # Media
 persist.media.treble_omx=false
+
+# Disable EGL buffer_age extension support
+debug.hwui.use_buffer_age=false
 
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false

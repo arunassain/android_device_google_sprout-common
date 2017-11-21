@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
     wificond \
     android.hardware.wifi@1.0-service
 
+# liblog symbols
+ PRODUCT_PACKAGES += \
+    libxlog
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1
 	
