@@ -136,10 +136,6 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # call the proprietary setup
 $(call inherit-product, vendor/google/sprout/sprout-vendor.mk)
 
-ifeq ($(WITH_MICROG),true)
-$(call inherit-product, $(LOCAL_PATH)/microG.mk)
-endif
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
