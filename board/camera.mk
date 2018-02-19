@@ -1,0 +1,3 @@
+# Camera
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+USE_CAMERA_STUB := true
