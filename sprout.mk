@@ -158,6 +158,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
 
+# Google Lens
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/camera/lens/google_build.xml:system/etc/sysconfig/google_build.xml \
+    $(LOCAL_PATH)/camera/lens/nexus.xml:system/etc/sysconfig/nexus.xml \
+    $(LOCAL_PATH)/camera/lens/pixel_2017.xml:system/etc/sysconfig/pixel_2017.xml \
+    $(LOCAL_PATH)/camera/lens/pixel_2017_exclusive.xml:system/etc/sysconfig/pixel_2017_exclusive.xml
+
 # USB
 PRODUCT_PACKAGES += \
     librs_jni \
