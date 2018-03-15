@@ -1,4 +1,4 @@
-COMMON_PATH := device/google/sprout-common
+DEVICE_PATH := device/google/sprout-common
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6582
@@ -27,14 +27,14 @@ TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Camera
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 USE_CAMERA_STUB := true
 
 # Custom RIL Class
-BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril/
+BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril/
 
 # Device Resolution
 DEVICE_RESOLUTION := 480x854
@@ -81,7 +81,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/fstab.sprout
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.sprout
 
 # Seccomp Policy
 BOARD_SECCOMP_POLICY += device/google/sprout-common/seccomp
@@ -93,7 +93,7 @@ BOARD_SEPOLICY_DIRS += device/google/sprout-common/sepolicy
 TARGET_LDPRELOAD += libsprout.so
 
 # Common Properties
-TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # TWRP Stuff
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
